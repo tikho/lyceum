@@ -1,0 +1,13 @@
+/*****************************************************************************/
+/* PeopleCounter: Style */
+/*****************************************************************************/
+.people-counter {
+}
+
+.youAreComming{
+	visibility:visible;
+}
+
+.youAreNotCommingYet{
+	visibility:hidden;
+}

@@ -1,0 +1,12 @@
+<template name="LectionsFeed">
+  <div class="lections-feed">
+   	{{#each lection}}
+		<div>
+			<h3><a href="/lection/{{_id}}">{{lector}}:{{headline}}</a></h3>
+			<h4>{{date}}</h4>
+			<h5>{{description}}</h5>
+			<h6>{{peopleCount}}</h6>
+		</div>
+	{{/each}}
+  </div>
+</template>
