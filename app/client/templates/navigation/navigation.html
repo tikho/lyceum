@@ -1,13 +1,14 @@
 <template name="Navigation">
   <div class="navigation">
-    <ul>
-    	<div class="logo-area">
-    		<a href="/">Home</a>
+  	<div class="row">
+    	<div class="col-md-4 menu-area">
     	</div>
-    	<div class="login-area">
-    		{{> loginButtons}}    		
+    	<div class="col-md-4 logo-area">
+    		<a href="/">Лекторий</a>
     	</div>
-    </ul>
-    <hr />
+    	<div class="col-md-4 login-area">
+    		{{> loginButtons}}
+    	</div>
+    </div>
   </div>
 </template>

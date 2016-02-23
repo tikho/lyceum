@@ -9,7 +9,7 @@ Template.QuestionsList.events({
 /*****************************************************************************/
 Template.QuestionsList.helpers({
 	'question':function(){
-		return Questions.find({lectionId:this._id});
+		return Questions.find({lectionId:this._id}, {sort:{date: -1}});
 	}
 });
 

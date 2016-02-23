@@ -2,4 +2,20 @@
 /* Navigation: Style */
 /*****************************************************************************/
 .navigation {
+	padding-top: 2vw;
+	text-align: center;
+	padding-bottom: 2vw;
+	border-bottom: 0.1px solid #ccc;
+}
+
+.logo-area{
+	font-family: 'Lora', serif;
+	text-transform: uppercase;
+	letter-spacing: 1vw;
+	font-size: 3vw;
+	font-weight: 400;
+}
+
+.login-area{
+	margin-top: 1.5vw;
 }

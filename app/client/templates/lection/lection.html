@@ -1,10 +1,18 @@
 <template name="Lection">
   <div class="lection">
-	<h1>{{lector}}:{{headline}}</h1>
-	<h2>{{date}}</h2>
-	<h5>{{description}}</h5>
-	{{> PeopleCounter}}
-	{{> AddQuestion}}
-	{{> QuestionsList}}
+  	<div class="row">
+  		<div class="col-md-8 main-column">
+			<h1>{{lector}}:{{headline}}</h1>
+			<h2>{{date}}</h2>
+			<h5>{{description}}</h5>
+			{{> AddQuestion}}
+			{{> QuestionsList}}
+  		</div>
+  		<div class="col-md-1 gutter">
+  		</div>
+  		<div class="col-md-3 peopleCounter column-centered">
+  			{{> PeopleCounter}}
+  		</div>
+  	</div>
   </div>
 </template>

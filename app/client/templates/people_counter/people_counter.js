@@ -3,8 +3,13 @@
 /*****************************************************************************/
 Template.PeopleCounter.events({
 	'click .addOne':function(){
-		Lections.update({_id:this._id}, {$inc:{peopleCount :1}});
-		Session.setAuth({comming: true });
+		Lections.update({_id:this._id}, {$inc:{peopleCount:1}});
+		Session.setAuth({lectionId: this._id, comming: "YES"});
+	},
+
+	'click .notComming':function(){
+		Lections.update({_id:this._id}, {$inc:{notComing:1}});
+		Session.setAuth({lectionId: this._id, comming: "NO"});
 	}
 });
 
@@ -13,20 +18,32 @@ Template.PeopleCounter.events({
 /*****************************************************************************/
 Template.PeopleCounter.helpers({
 	'comeButtonPressed': function(){
-		if (Session.get('comming')){
-			return 'disabled';
-		} else{
-			return '';
+		// var sessionLection = Session.get('lectionId', 'comming');
+		// var lectionId = Session.get('lectionId');
+		// var comming = Session.get('comming');
+		// console.log("SessionLection:" + sessionLection);
+		// console.log("this._id:" + this._id);
+		// console.log("lectionId:" + lectionId);
+		// console.log("comming:" + comming);
+		if (Session.get('lectionId') == this._id){
+			if (Session.get('comming')){
+				return 'disabled';
+			} else{
+				return '';
+			}
 		}
 	},
 
-	'youAreComming': function(){
-		if (Session.get('comming')){
-			return 'youAreComming';
-		} else{
-			return 'youAreNotCommingYet';
+	'areYouComming': function(){
+		if (Session.get('lectionId') == this._id){
+			if (Session.get('comming')){
+				return 'decided';
+			} else{
+				return 'noDecision';
+			}
 		}
 	}
+
 });
 
 /*****************************************************************************/

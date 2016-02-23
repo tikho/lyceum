@@ -2,12 +2,16 @@
 /* AddQuestion: Event Handlers */
 /*****************************************************************************/
 Template.AddQuestion.events({
-	'submit form':function(){
-		Questions.insert({
-			questionText: $('[name="question"]').val(),
-			lectionId: this._id
-		});
-		$('[name="question"]').val('');
+	'click .postQuestion':function(){
+		var question = $('[name="question"]').val();
+		if (question){
+			Questions.insert({
+				questionText: question,
+				lectionId: this._id,
+				date: new Date()
+			});
+			$('[name="question"]').val('');
+		}
 		return false;
 	}
 });

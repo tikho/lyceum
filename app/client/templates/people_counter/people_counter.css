@@ -4,10 +4,10 @@
 .people-counter {
 }
 
-.youAreComming{
+.decided{
 	visibility:visible;
 }
 
-.youAreNotCommingYet{
+.noDecision{
 	visibility:hidden;
 }

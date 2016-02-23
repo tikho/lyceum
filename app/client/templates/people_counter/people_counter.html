@@ -2,6 +2,11 @@
   <div class="people-counter">
     <p><strong>{{peopleCount}}</strong> people are going to come.</p>
     <input type="button" value="I'm coming too" class="btn btn-success addOne {{comeButtonPressed}}" {{comeButtonPressed}}>
-    <p class="{{youAreComming}}">You are already comming!</p>
+    <p class="{{areYouComming}}">You are already comming!</p>
+    <hr />
+    <p><strong>{{notComing}}</strong> people don't want to come</p>
+    <p class="{{areYouComming}}">You don't want to come.</p>
+    <input type="button" value="Not comming" class="btn btn-danger notComming {{comeButtonPressed}}" {{comeButtonPressed}}>
+
   </div>
 </template>
